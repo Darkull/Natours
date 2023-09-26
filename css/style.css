@@ -77,4 +77,39 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 70rem, 0 100%);
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.logo {
+  height: 3.5rem;
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+}
+.heding-primary-main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+}
+.heading-primary-sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.74rem;
 }
