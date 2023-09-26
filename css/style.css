@@ -1,0 +1,78 @@
+/*
+--- 01 - TYPHOGRAPHY SYSTEM
+
+- FONT SIZE SYSTEM (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weight:
+    Default: 400
+    Medium:
+    semi-bold:
+    bold:
+
+- Line heights:
+    Default: 1
+    small:
+    Medium:
+    Paragraph Default:
+
+
+- SPACING SYSTEM (px)
+    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+- Letter Spacing
+-0.5px
+
+
+--- 02 COLORS
+
+- Primary:
+    Light Green: #7ed56f
+    Medium Green: #55c57a
+    Dark Green: #28b485
+
+
+    Tints:
+    Shades:
+    Accents:
+    Greys: #777 ,
+
+
+---- 05 SHADOWS
+
+  - 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+---- 06 BORDER-Radius
+    Default:
+    Medium:
+
+            */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.74),
+      rgba(40, 180, 133, 0.863)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+}
