@@ -28,7 +28,7 @@
 
 - Primary:
     Light Green: #7ed56f
-    Medium Green: #55c57a
+    Medium Green:
     Dark Green: #28b485
 hello
 
@@ -47,115 +47,96 @@ hello
     Medium:
 
             */
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 html {
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-}
+  padding: 3rem; }
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.74),
-      rgba(40, 180, 133, 0.863)
-    ),
-    url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.74), rgba(40, 180, 133, 0.863)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 70rem, 0 100%);
-  position: relative;
-}
+  position: relative; }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem;
-}
+  left: 4rem; }
 
-.logo {
-  height: 3.5rem;
-}
+.header__logo {
+  height: 3.5rem; }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-}
+  text-align: center; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-
   backface-visibility: hidden;
   /* when rotate 180dgre object we see the backpart and in animation it may visible shaky so we use this to hide the backpart and make the animation object appear smoother */
-  margin-bottom: 6rem;
-}
-.heding-primary-main {
+  margin-bottom: 6rem; }
+
+.heding-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
   animation-name: moveInLeft;
   animation-duration: 1s;
-  animation-timing-function: ease-out;
-}
-.heading-primary-sub {
+  animation-timing-function: ease-out; }
+
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.74rem;
-  animation: moneInRight 1s ease-out;
-}
+  animation: moneInRight 1s ease-out; }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
-  }
-
+    transform: translateX(-100px); }
   80% {
     opacity: 1;
-    transform: translateX(10px);
-  }
-
+    transform: translateX(10px); }
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 @keyframes moneInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
-  }
-
+    transform: translateX(100px); }
   80% {
     opacity: 1;
-    transform: translateX(-10px);
-  }
-
+    transform: translateX(-10px); }
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 .btn:link,
 .btn:visited {
@@ -165,31 +146,39 @@ body {
   border-radius: 4rem;
   display: inline-block;
   transition: all 0.2s;
-}
+  position: relative; }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
-  color: #777;
-}
+  color: #777; }
 
 .btn::after {
   content: "";
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 4rem;
-}
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s; }
 
-.btn::before {
-  content: "";
-}
+.btn--white::after {
+  background-color: #fff; }
+
+.btn:hover::after {
+  transform: scale(1.5);
+  opacity: 0; }
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
