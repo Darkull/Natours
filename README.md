@@ -1,6 +1,10 @@
 # Natours - A travelling web page
 
-# node sass
+## Howdy!🚀 Just a heads-up:
+
+So, this README is basically Alif's SCSS playground—think of it as a rollercoaster of insights and a dash of chaos. Not everyone's jam, but that's cool! Questions poppin'? Hit up Alif anytime; he's down for a chat. Ready for the wild ride through this learning maze? Buckle up! 🎢🤘💬
+
+# node SASS
 
 `npm init`
 
@@ -12,11 +16,7 @@ to install from package.json run `npm install`
 
 to uninstall a package `npm uninstall jquery`
 
-### Howdy!🚀 Just a heads-up:
-
-    So, this README is basically Alif's SCSS playground—think of it as a rollercoaster of insights and a dash of chaos. Not everyone's jam, but that's cool! Questions poppin'? Hit up Alif anytime; he's down for a chat. Ready for the wild ride through this learning maze? Buckle up! 🎢🤘💬
-
-## create scss
+## Create SCSS
 
 create sass folder `mkdir sass`
 
