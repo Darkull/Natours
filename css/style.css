@@ -1,113 +1,3 @@
-/*
---- 01 - TYPHOGRAPHY SYSTEM
-
-- FONT SIZE SYSTEM (px)
-    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-- Font weight:
-    Default: 400
-    Medium:
-    semi-bold:
-    bold:
-
-- Line heights:
-    Default: 1
-    small:
-    Medium:
-    Paragraph Default:
-
-
-- SPACING SYSTEM (px)
-    2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
-- Letter Spacing
--0.5px
-
-
---- 02 COLORS
-
-- Primary:
-    Light Green: #7ed56f
-    Medium Green:
-    Dark Green: #28b485
-hello
-
-    Tints:
-    Shades:
-    Accents:
-    Greys: #777 ,
-
-
----- 05 SHADOWS
-
-  - 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-
----- 06 BORDER-Radius
-    Default:
-    Medium:
-
-            */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-html {
-  font-size: 62.5%; }
-
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.74), rgba(40, 180, 133, 0.863)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 70rem, 0 100%);
-  position: relative; }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
-
-.header__text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  /* when rotate 180dgre object we see the backpart and in animation it may visible shaky so we use this to hide the backpart and make the animation object appear smoother */
-  margin-bottom: 6rem; }
-
-.heding-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out; }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.74rem;
-  animation: moneInRight 1s ease-out; }
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -138,8 +28,46 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* when rotate 180dgre object we see the backpart and in animation it may visible shaky so we use this to hide the backpart and make the animation object appear smoother */
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: moneInRight 1s ease-out; }
+
+.btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 1.5rem 4rem;
@@ -151,6 +79,9 @@ body {
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scale(1.5);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px);
@@ -159,6 +90,8 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -172,13 +105,26 @@ body {
   z-index: -1;
   transition: all 0.4s; }
 
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scale(1.5);
-  opacity: 0; }
-
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.74), rgba(40, 180, 133, 0.863)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 70rem, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
